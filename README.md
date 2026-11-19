@@ -43,8 +43,7 @@ Links can be full video links, short `vm.tiktok.com` / `vt.tiktok.com` links, or
 | One page of about 50 comments | [`tiktok.videos.comments.list`](https://okdata.online/apis/tiktok/videos/comments/list/) | $0.002 |
 | Resolving a short link (only for vm/vt links) | [`tiktok.videos.get`](https://okdata.online/apis/tiktok/videos/get/) | $0.002 |
 
-1,000 comments cost about $0.04. A call that reaches the data source is charged even when it comes back empty or
-failed; calls stopped before that (bad parameters, low balance) are free. The script prints the most a run can cost before it starts
+1,000 comments cost about $0.04, pay per call with no subscription. The script prints the most a run can cost before it starts
 and refuses runs over `--budget` (default $1). Prices: [prices.json](https://github.com/okdataapi/okdata/blob/main/docs/prices.json).
 
 ## Notes
@@ -62,6 +61,6 @@ and refuses runs over `--budget` (default $1). Prices: [prices.json](https://git
 ## 中文
 
 把一个或多个 TikTok 视频的评论导出成 CSV（或 JSON Lines）：评论内容、点赞、回复数、作者和时间。不用登录 TikTok，
-不用浏览器自动化，不用 Cookie。一个 Python 文件，只用标准库。每页约 50 条评论 $0.002，1,000 条约 $0.04，请求到了数据源的调用返回为空或出错也照常计费。
+不用浏览器自动化，不用 Cookie。一个 Python 文件，只用标准库。每页约 50 条评论 $0.002，1,000 条约 $0.04，按次计费，不用订阅。
 先在 [okdata](https://okdata.online/zh/signup/?src=gh-tiktok-comments-export) 注册拿 key，放进 `OKDATA_API_KEY`，然后
 `python3 export_comments.py <视频链接> --pages 2 -o comments.csv`。MIT 许可证。
