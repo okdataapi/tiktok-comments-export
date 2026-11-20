@@ -40,15 +40,15 @@ Links can be full video links, short `vm.tiktok.com` / `vt.tiktok.com` links, or
 
 | Step | Endpoint | Price |
 |---|---|---|
-| One page of about 50 comments | [`tiktok.videos.comments.list`](https://okdata.online/apis/tiktok/videos/comments/list/) | $0.002 |
-| Resolving a short link (only for vm/vt links) | [`tiktok.videos.get`](https://okdata.online/apis/tiktok/videos/get/) | $0.002 |
+| One page of about 50 comments | [`tiktok.videos.comments.list`](https://okdata.online/apis/tiktok/videos/comments/list/?src=gh-tiktok-comments-export) | $0.002 |
+| Resolving a short link (only for vm/vt links) | [`tiktok.videos.get`](https://okdata.online/apis/tiktok/videos/get/?src=gh-tiktok-comments-export) | $0.002 |
 
 1,000 comments cost about $0.04, pay per call with no subscription. The script prints the most a run can cost before it starts
 and refuses runs over `--budget` (default $1). Prices: [prices.json](https://github.com/okdataapi/okdata/blob/main/docs/prices.json).
 
 ## Notes
 
-- A sample project by [okdata](https://okdata.online), not affiliated with TikTok or ByteDance. The script only
+- A sample project by [okdata](https://okdata.online/?src=gh-tiktok-comments-export), not affiliated with TikTok or ByteDance. The script only
   calls the okdata API; there is no scraper in it.
 - Public comments only. Respect people's privacy: analyse what is said, do not build profiles of commenters.
 - Working in an AI agent? Connect okdata's remote MCP server `https://api.okdata.online/mcp`, or install the
